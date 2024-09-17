@@ -9,52 +9,209 @@ body {
 }
 
 .all_container {
-  border: 2px solid rgb(255, 3, 3);
-  margin-top: 10%;
+  border: 1px solid rgb(0, 0, 0);
+  margin-top: 3%;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  align-content: center;
-  height: 25rem;
+  background: #f3f1f1;
+  position: relative;
+}
+
+.close_button{
+  aspect-ratio: 1/1;
+  height: 50px;
+  border-bottom-left-radius: 20px;
+  position: absolute; 
+  top: 0px; 
+  right: 0px; 
+  cursor: pointer; 
 }
 
 .head_container {
-  border: 2px solid rgb(77, 243, 0);
+  /* border: 2px solid rgb(77, 243, 0); */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 30%;
+  height: 20%;
   margin-top: 5%;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.head_container p {
+  font-size: 1.2rem;
 }
 
 .drop_here {
-  border: 2px dotted rgb(2, 60, 253);
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
   border-radius: 20px;
+  gap: 1.5rem;
+  border: 2px dotted #007bff;
+  background: #dcedff;
+  margin: 5% 0% 5% 0%;
+  color: #007bff;
 }
 
 .cloud_image {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   width: 20%;
   aspect-ratio: 1/1;
+  margin-top: 1.5rem;
 }
 
 .browser_text {
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  margin-bottom: 1rem;
 }
 
 .uploading_list {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   align-self: flex-start;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  box-sizing: border-box;
+  align-self: center;
+  margin-bottom: 1rem;
+}
+.uploading_list h3{
+    color:#007bff;
+}
+
+.files_container {
+  /* border: 2px solid rgb(218, 13, 13); */
+}
+.file_info {
+  /* border: 2px solid green; */
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+.icon_container {
+  height: 9%;
+  width: 8%;
+  /* border: 2px solid green; */
+}
+.file_icon {
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+.colmun {
+  /* border: 2px solid rgb(0, 0, 0); */
+  width: 80%;
+  color: #007bff;
+  font-weight: bold;
+}
+.file_name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.file_progress {
+  background-color: #e0e0e0; 
+  border-radius: 25px; 
+  padding: 5px;
+  position: relative;
+  height: 5px;
+  width: 100%;
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1); 
+  overflow: hidden;
+}
+
+.file_progress span {
+  display: block;
+  height: 100%;
+  background-color: #007bff; 
+  width: 0; 
+  border-radius: 20px; 
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5); 
+  animation: loadProgress 3s ease-in-out infinite; 
+}
+
+@keyframes loadProgress {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 80%; 
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.right_cross {
+  /* border: 2px solid black; */
+}
+.right_emoji {
+  position: relative;
+}
+
+.cross_emoji {
+  position: relative;
+}
+
+.osm_button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 123, 255, 0.3);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.osm_button:hover {
+  background-color: #0056b3; 
+  box-shadow: 0px 12px 20px rgba(0, 123, 255, 0.5);
+  transform: translateY(-3px); /
+}
+
+.osm_button:active {
+  background-color: #004494;
+  box-shadow: 0px 5px 10px rgba(0, 123, 255, 0.2);
+  transform: translateY(1px); /
+}
+
+.all_container_shadow {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1),
+    0 4px 6px rgba(0, 0, 0, 0.05),
+    0 20px 25px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease;
+}
+
+.all_container_shadow:hover {
+  box-shadow: 0 12px 17px rgba(0, 0, 0, 0.15), 0 6px 8px rgba(0, 0, 0, 0.1),
+    0 24px 30px rgba(0, 0, 0, 0.15); 
+  transform: translateY(-3px); 
+}
+
+
+@media (max-width:780px) {
+    .colmun{
+        width: 75%;
+    }
+    .icon_container{
+        width: 12%;
+    }
+
+    .all_container{
+        max-width: 90%;
+    }
+    .close_button{
+        height: 40px;
+    }
 }

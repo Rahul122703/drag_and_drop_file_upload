@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.all_container {
+  border: 2px solid rgb(255, 3, 3);
+  margin-top: 10%;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.head_container {
+  border: 2px solid rgb(77, 243, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drop_here {
+  border: 2px dotted rgb(2, 60, 253);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  border-radius: 20px;
+}
+
+.cloud_image {
+  border: 2px solid black;
+  width: 20%;
+  aspect-ratio: 1/1;
+}
+
+.browser_text {
+  border: 2px solid black;
+}
+
+.uploading_list {
+  border: 2px solid black;
+}

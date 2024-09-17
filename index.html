@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRAG AND DROP FILE UPLOAD</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DRAG AND DROP FILE UPLOAD</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <div class="all_container">
+
+            <div class="head_container">
+                <h1>Upload Files</h1>
+                <p>PDF,Images and videos are allowed</p>
+            </div>
+
+            <div class="drop_here">
+                <img src="./drag_and_drop.png" class="cloud_image" />
+                <h3>Drag & Drop your Files here</h3>
+                <h3>OR</h3>
+                <label class="browser_text" for="browser_button">browse
+                    Files</label>
+                <input id="browser_button" type="file" style="display: none;">
+            </div>
+            <div class="uploading_list">
+                <h3>Uploaded Files</h3>
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>

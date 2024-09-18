@@ -75,7 +75,7 @@ body {
 .uploading_list {
   /* border: 2px solid black; */
   align-self: flex-start;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 90%;
@@ -97,12 +97,12 @@ body {
   margin: 2%;
 }
 .icon_container {
-  height: 9%;
+  height: 2%;
   width: 8%;
   /* border: 2px solid green; */
 }
 .file_icon {
-  height: 100%;
+  height: 2.5rem;
   aspect-ratio: 1/1;
 }
 .colmun {
@@ -131,10 +131,10 @@ body {
   display: block;
   height: 100%;
   background-color: #007bff; 
-  width: 0; 
+  width: 0%; 
   border-radius: 20px; 
   box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5); 
-  animation: loadProgress 3s ease-in-out infinite; 
+  /* animation: loadProgress 3s ease-in-out infinite;  */
 }
 
 @keyframes loadProgress {
@@ -151,12 +151,15 @@ body {
 
 .right_cross {
   /* border: 2px solid black; */
+  cursor: pointer;
 }
 .right_emoji {
+  margin-top: 55%;
   position: relative;
 }
 
 .cross_emoji {
+  margin-top: 55%;
   position: relative;
 }
 
@@ -214,4 +217,44 @@ body {
     .close_button{
         height: 40px;
     }
+}
+
+.complete_upload{
+
+}
+
+/* 
+During upload
+visible            invisible
+.percentage        .right_emoji
+.file_progress 
+.cross_emoji
+
+After upload
+visible            invisible
+.percentage        .cross_emoji
+.file_progress 
+.right_emoji 
+*/
+
+/* During upload */
+.uploading .percentage,
+.uploading .file_progress,
+.uploading .cross_emoji {
+  display: block; 
+}
+
+.uploading .right_emoji {
+  display: none; 
+}
+
+/* After upload */
+.uploaded .right_emoji {
+  display: block; 
+}
+
+.uploaded .percentage,
+.uploaded .file_progress,
+.uploaded .cross_emoji {
+  display: none;
 }
